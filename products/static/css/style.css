@@ -1,0 +1,1122 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #111111;
+}
+
+/*css index, menu responsive*/
+.nav__responsive-ul {
+    display: none;
+    text-decoration: none;
+}
+
+.nav__responsive {
+    display: none;
+    text-decoration: none;
+
+}
+
+.nav {
+    margin-bottom: 37px;
+    background-color: #a4161a;
+    padding: 13px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+    border-radius: 3px;
+    box-shadow: 5px 5px 10px #3B3C40;
+
+}
+
+.nav__ul--margin {
+    margin-left: 20%;
+    height: 50px;
+    font-size: 25px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.nav__li {
+    display: table-cell;
+    padding: 7px;
+    color: #fff;
+}
+
+.left {
+    position: relative;
+    right: 30px;
+}
+
+.right {
+    position: relative;
+    right: 290px;
+
+}
+
+
+.nav__li:hover > a {
+    position: relative;
+    top: 2px;
+    color: #fbc3bc;
+}
+
+.nav__li:hover {
+    position: relative;
+    top: 2px;
+    color: #fbc3bc;
+}
+
+.nav__li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav__li i {
+    box-sizing: border-box;
+    text-align: right;
+    margin-right: 8px;
+}
+
+.nav__responsive-button-container {
+    position: absolute;
+    width: 100%;
+    font-size: 40px;
+    background-color: #a4161a;
+    margin-top: -35px;
+    z-index: 100;
+}
+
+.nav__responsive-button {
+    padding: 0 -10px;
+    text-align: right;
+    width: 69%;
+}
+
+@media only screen and (max-width: 500px) {
+    .nav__ul {
+        display: none;
+    }
+
+    .nav {
+        margin-top: -10px;
+        height: 37px;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+
+    }
+
+    .nav__responsive-ul {
+        display: block;
+        position: absolute;
+        width: 220px;
+        margin-top: 10px;
+        padding-top: 22px;
+        height: 37px;
+        list-style: none;
+
+    }
+
+    .nav__li-container {
+        position: relative;
+        top: -1000px;
+        height: calc(89vh - 64px);
+        background-color: #a4161a;
+        transition: all 1s;
+        z-index: 1;
+        width: 75%;
+        padding-top: 27px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 10px #3B3C40;
+        font-family: 'Pattaya', sans-serif;
+    }
+
+    .nav__responsive-li {
+        width: 100%;
+        padding: 0 0;
+    }
+
+    .nav__responsive-li i {
+        box-sizing: border-box;
+        text-align: center;
+        margin-right: 15px;
+        width: 30px;
+        color: white;
+    }
+
+    .nav__responsive-li a {
+        color: white;
+        text-decoration: none;
+
+    }
+
+    .nav__responsive-li a:hover {
+        color: #fbc3bc;
+        text-decoration: none;
+    }
+
+    .nav__responsive-ul:hover > .nav__li-container {
+        top: -17px;
+    }
+
+    .section_index {
+        padding-top: 57px;
+        font-size: 20px;
+    }
+}
+
+
+.section_index {
+    margin: 10px;
+    font-size: 40px;
+    font-family: 'Stint Ultra Condensed', cursive;
+}
+
+.index_p-history {
+    text-align: justify;
+    color: #f1faee;
+
+}
+
+.index_p-history img {
+    float: left;
+    width: 500px;
+    height: 400px;
+}
+
+.index_p-history h2 {
+    font-size: 60px;
+    color: #e63946;
+    text-align: center;
+    font-family: 'Pattaya', sans-serif;
+    text-shadow: 1px 1px 1px #111;
+}
+
+.index_p-history h2:hover {
+    text-shadow: 1px 1px 1px #e63946;
+}
+
+.index_p-history a {
+    margin-left: 34%;
+    color: #f1faee;
+    text-decoration: none;
+    transition: font-size .2s
+}
+
+.index_p-history a:hover {
+    text-align: center;
+    text-decoration: underline #e63946;
+    font-size: 50px;
+    transition: .2s
+}
+
+.index_p-history a:link {
+    color: #1d3557
+}
+
+footer {
+    margin: 0;
+    padding-top: 100px;
+    background-color: #a4161a;
+    height: 200px;
+    border-radius: 3px;
+    box-shadow: 4px -4px 12px 0 rgba(0, 0, 0, 0.75);
+}
+
+.footer a {
+    margin-left: 35px;
+    display: block;
+    text-decoration: none;
+    font-size: 25px;
+    color: #Fff;
+    font-family: 'Antonio', sans-serif;
+    transition: all .1s;
+}
+
+.footer a:hover {
+    color: #bbbbbb;
+    transition: all .2s;
+
+}
+
+.ul li {
+    display: inline-block;
+}
+
+.footer a > img {
+
+    width: 40px;
+    height: 40px;
+    position: relative;
+    bottom: 50px;
+    margin-left: 90%;
+    transition: all .2s
+}
+
+.footer a > img:hover {
+    width: 25px;
+    height: 25px;
+    transition: all .4s;
+}
+
+.name {
+    display: block;
+    font-family: 'Pattaya', sans-serif;
+    color: #fff;
+    font-size: 50px;
+    position: relative;
+    text-align: center;
+    bottom: 50px;
+    text-shadow: 1.5px 1.5px #111;
+}
+
+.tg {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.tg td {
+    border: #f1faee 2px solid;
+
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg th {
+    border: #f1faee 2px solid;
+    font-family: 'Fredoka One', cursive;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+
+}
+
+.tg .tg-0lax {
+    text-align: center;
+    vertical-align: top
+}
+
+.card_table {
+    padding-left: 20%;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.messages_table {
+    font-family: 'Pattaya', sans-serif;
+    padding-left: 20px;
+    margin-bottom: -90px;
+    z-index: 1;
+    margin-left: 20%;
+    background-color: #e63946;
+    font-size: 30px;
+    height: 100%;
+    width: 59%;
+    color: #fff;
+
+}
+
+.section_table ul li {
+    list-style: none;
+    text-align: center;
+}
+
+.card_table form {
+    color: red;
+}
+
+.card_table input[type='submit'] {
+    color: red;
+}
+
+.section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/*css of views*/
+.card_view {
+    font-family: 'Roboto', sans-serif;
+    background-color: #d3d3d3;
+    color: #111111;
+    font-size: 20px;
+    border: solid #111111 2px;
+    margin: 10px;
+    padding: 17px;
+    width: 400px;
+    height: 600px;
+    display: inline-grid;
+    position: relative;
+    left: 4.5%;
+    text-align: justify-all;
+    border-radius: 15px 5px;
+    box-shadow: 1px 2px 16px 2px #d3d3d3;
+}
+
+.section a {
+    text-decoration: none;
+}
+
+.card_view:hover {
+    background-color: #a4161a;
+    color: #f1faee;
+    position: relative;
+    bottom: 10px;
+    left: 5%;
+    transition: all .2s;
+}
+
+.card_view h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+
+.card_view h4 {
+    position: relative;
+    height: 40px;
+    width: 130px;
+    text-align: center;
+}
+
+.card_view img {
+    position: relative;
+    left: 23%;
+}
+
+.card_view img:hover {
+    opacity: 0.6;
+}
+
+
+.card_view input[type="submit"] {
+    position: relative;
+    left: 120px;
+    height: 44px;
+    width: 150px;
+    background-color: #a4161a;
+    font-size: 35px;
+    font-family: 'Fredoka One', cursive;
+    font-weight: normal;
+    border-radius: 10px 5px;
+    text-align: center;
+    padding-bottom: 6px;
+
+}
+
+.card_view input[type="submit"]:hover {
+    height: 46px;
+    width: 152px;
+    background-color: #e63946;
+    color: #f1faee;
+}
+
+#button_buy input[type="submit"] {
+
+    height: 44px;
+    width: 150px;
+    font-size: 35px;
+    font-family: 'Fredoka One', cursive;
+    font-weight: normal;
+    background-color: #1e6f5c;
+    border-radius: 10px 5px;
+    text-align: center;
+    padding-bottom: 6px;
+}
+
+#button_buy input[type="submit"]:hover {
+    height: 46px;
+    width: 152px;
+    background-color: #29bb89;
+    color: #f1faee;
+}
+
+/*Tables user style*/
+.section_table {
+    font-family: 'Fredoka One', cursive;
+    margin-bottom: 100px;
+    margin-top: 150px;
+    position: relative;
+    top: 10px;
+    right: 10%;
+}
+
+.tgs {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.tgs td {
+    border-style: solid;
+    border-width: 0px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tgs th {
+    border: white 2px solid;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+
+
+}
+
+.tgs .tg-0lax {
+    text-align: center;
+    vertical-align: top
+}
+
+.tgs .tg-0pky {
+    border-color: #f1faee;
+    text-align: center;
+    vertical-align: top
+}
+
+.name_table {
+    width: 200px;
+}
+
+/*filter style*/
+.filter .card_filter {
+    font-family: 'Roboto', sans-serif;
+    background-color: #d3d3d3;
+    color: #111111;
+    font-size: 20px;
+    border: solid #111111 2px;
+    margin: 10px;
+    padding: 17px;
+    width: 400px;
+    height: 600px;
+    display: inline-grid;
+    position: relative;
+    left: 40%;
+    top: -60px;
+    text-align: justify-all;
+    border-radius: 15px 5px;
+    box-shadow: 1px 2px 16px 2px #d3d3d3;
+}
+
+.card_filter:hover {
+    background-color: #a4161a;
+    color: #f1faee;
+    position: relative;
+    bottom: 10px;
+    left: 40.5%;
+    transition: all .2s;
+}
+
+.card_filter h2 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+
+.card_filter h4 {
+    position: relative;
+    height: 40px;
+    width: 130px;
+    text-align: center;
+}
+
+.card_filter img {
+    position: relative;
+    left: 23%;
+}
+
+.card_filter img:hover {
+    opacity: 0.6;
+}
+
+/*style cart*/
+.section_cart {
+    font-family: 'Fredoka One', cursive;
+    margin-bottom: 100px;
+    margin-top: 150px;
+    position: relative;
+    top: 10px;
+    left: 18%;
+}
+
+.section_cart table a {
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #f1faee;
+    display: block;
+    position: relative;
+    top: 60px;
+    align-items: center;
+}
+
+.section_cart table h4 {
+    position: relative;
+    top: 50px;
+    margin: 20px;
+    font-size: 30px;
+}
+
+.section_cart h2 {
+    color: #f1faee;
+    font-size: 20px;
+
+}
+
+.section_cart h3 {
+    color: #e63946;
+    font-size: 20px;
+}
+
+.section_cart h2:hover {
+    color: #f1faee;
+    font-size: 25px;
+}
+
+.section_cart h3:hover {
+    color: #e63946;
+    font-size: 25px;
+}
+
+.section_cart form {
+    position: relative;
+    left: 100px;
+    margin: 20px;
+}
+
+.section_cart input[type="text"] {
+    height: 30px;
+    width: 600px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+}
+.section_cart input[type="submit"] {
+    height: 30px;
+    width: 190px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    color: #f1faee;
+    background-color: #111111;
+    border-color: #111111;
+}
+.section_cart input[type="submit"]:hover{
+    border-color: #f1faee;
+    border-radius: 10px 5px;
+    color: #1e6f5c;
+}
+
+/*style filter*/
+.filter .search-form {
+    border: #111111 2px solid;
+    display: block;
+    height: 100px;
+    width: 300px;
+    z-index: 2;
+    position: relative;
+    top: 300px;
+    left: 40px;
+    background-color: #d3d3d3;
+    box-shadow: 1px 2px 16px 2px #d3d3d3;
+    text-align: justify-all;
+    border-radius: 15px 5px;
+    margin: 30px;
+    padding: 10px;
+}
+
+.section_filter {
+    width: 100%;
+    height: 780px;
+}
+
+#text_filter {
+    width: 290px;
+    height: 30px;
+    font-size: 25px;
+    font-family: 'Fredoka One', cursive;
+    font-weight: normal;
+
+}
+
+#button_filter {
+    position: relative;
+    top: 30px;
+    left: 90px;
+    height: 35px;
+    width: 110px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    border-radius: 10px 5px;
+}
+
+#button_filter:hover {
+    position: relative;
+    top: 28px;
+    left: 88px;
+    text-shadow: #111111 1px 1px;
+}
+
+.messages_filter {
+    color: #f1faee;
+}
+
+/*style of peripherals*/
+.section_type_peripheral {
+    display: table-cell;
+    position: relative;
+    left: 590px;
+
+}
+
+.section_type_peripheral li {
+    text-decoration: none;
+    margin-top: -40px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.section_type_peripheral a {
+    font-family: 'Fredoka One', cursive;
+    color: #f1faee;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.section_type_peripheral a:hover {
+    font-size: 28px;
+    background-color: #f1faee;
+    color: #111111;
+}
+
+/*Style detail*/
+
+.card_detail {
+    color: #f1faee;
+    margin-left: 150px;
+}
+
+.card_detail img {
+    transition: width 0.4s, height 0.2s;
+
+}
+
+.card_detail img:hover {
+    position: relative;
+    top: -20px;
+    width: 450px;
+    height: 450px;
+    transition: width 0.4s, height 0.2s;
+}
+
+.card_detail h2 {
+    position: relative;
+    bottom: 120px;
+    font-size: 50px;
+    left: 40px;
+    display: inline-block;
+}
+
+.card_detail h3 {
+    position: relative;
+    bottom: 80px;
+    right: 585px;
+    display: inline-block;
+}
+
+.card_detail .update {
+    font-family: 'Fredoka One', cursive;
+    position: relative;
+    bottom: 80px;
+    right: 500px;
+    color: #f1faee;
+    font-size: 20px;
+}
+
+.card_detail .update:hover {
+    background-color: #f1faee;
+    color: #111111;
+}
+
+.card_detail input[type="submit"] {
+    position: relative;
+    left: 800px;
+    bottom: 112px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+    height: 28px;
+    width: 100px;
+    display: inline-block;
+    background-color: #111111;
+    color: #f1faee;
+    border-color: #111111;
+}
+
+.card_detail input[type="submit"]:hover {
+    background-color: #f1faee;
+    color: #111;
+}
+
+.card_detail h4 {
+    position: relative;
+    left: 50px;
+    font-size: 20px;
+    width: 800px;
+    text-align: justify;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+.card_detail h5 {
+    position: relative;
+    left: 50px;
+    font-size: 18px;
+    color: #3B3C40;
+}
+
+.card_detail h5:hover {
+    text-decoration: underline #3B3C40;
+}
+
+/*style pc detail*/
+.card_detail_pc {
+    color: #f1faee;
+    margin-left: 150px;
+}
+
+.card_detail_pc img {
+    transition: width 0.4s, height 0.2s;
+
+}
+
+.card_detail_pc img:hover {
+    position: relative;
+    top: -20px;
+    width: 450px;
+    height: 450px;
+    transition: width 0.4s, height 0.2s;
+}
+
+.card_detail_pc h2 {
+    position: relative;
+    bottom: 120px;
+    font-size: 50px;
+    left: 40px;
+    display: inline-block;
+}
+
+.card_detail_pc h3 {
+    position: relative;
+    bottom: 80px;
+    right: 180px;
+    display: inline-block;
+}
+
+.card_detail_pc .update {
+    font-family: 'Fredoka One', cursive;
+    position: relative;
+    bottom: 80px;
+    right: 120px;
+    color: #f1faee;
+    font-size: 20px;
+}
+
+.card_detail_pc .update:hover {
+    background-color: #f1faee;
+    color: #111111;
+}
+
+.card_detail_pc input[type="submit"] {
+    position: relative;
+    left: 800px;
+    bottom: 112px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+    height: 28px;
+    width: 100px;
+    display: inline-block;
+    background-color: #111111;
+    color: #f1faee;
+    border-color: #111111;
+}
+
+.card_detail_pc input[type="submit"]:hover {
+    background-color: #f1faee;
+    color: #111;
+}
+
+.card_detail_pc h4 {
+    font-family: 'Fredoka One', cursive;
+    position: relative;
+    left: 50px;
+    font-size: 20px;
+    width: 800px;
+    text-align: justify;
+    margin-bottom: 20px;
+    margin-top: -20px;
+
+}
+
+.card_detail_pc ul {
+    font-size: 25px;
+    position: relative;
+    left: 150px;
+    display: inline-block;
+}
+
+.card_detail_pc ul > li {
+    text-decoration: none;
+    list-style: none;
+    text-align: justify;
+}
+
+.messages_view {
+    color: #e63946;
+    font-size: 25px;
+    font-family: 'Fredoka One', cursive;
+    font-weight: initial;
+    position: relative;
+    left: 40%;
+    bottom: 20px;
+
+}
+
+.messages_view > li {
+    list-style: none;
+}
+
+.card_detail_pc .img_monitor {
+    height: 300px;
+    width: 400px;
+
+}
+
+/*style update */
+.section_update {
+    color: #f1faee;
+    display: inline-block;
+    position: relative;
+    left: 23%;
+    top: 150px;
+    margin-bottom: 300px;
+    align-content: center;
+}
+
+.section_update label {
+    padding: 20px;
+    margin: 30px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    position: relative;
+    bottom: 40px;
+}
+
+.section_update select {
+    margin: 30px;
+    padding-left: 0;
+    position: relative;
+    right: 180px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    height: 38px;
+    width: 641.2px;
+    align-items: center;
+}
+
+.section_update input[type="text"] {
+    margin: 30px;
+    position: relative;
+    right: 170px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    height: 38px;
+    width: 641.2px;
+    align-items: center;
+}
+
+.section_update input[type="submit"] {
+    border-radius: 10px 5px;
+    position: relative;
+    left: 450px;
+    width: 250px;
+    height: 38px;
+    font-size: 25px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.section_update input[type="password"] {
+    margin: 30px;
+    position: relative;
+    right: 170px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    height: 38px;
+    width: 641.2px;
+    align-items: center;
+}
+
+.section_update input[type="submit"]:hover {
+    color: #1e6f5c;
+}
+
+.section_update input[type="checkbox"] {
+    position: relative;
+    bottom: 37px;
+}
+
+.messages_update {
+    color: #1e6f5c;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    list-style: none;
+    position: relative;
+    left: 60px;
+}
+
+.messages_update a {
+    position: relative;
+    left: 160px;
+    text-decoration: none;
+    color: #f1faee;
+}
+
+.messages_update a:hover {
+    color: #29bb89;
+    text-decoration: #29bb89 solid;
+}
+.section_update input[type="number"] {
+    margin: 30px;
+    position: relative;
+    right: 170px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    height: 38px;
+    width: 641.2px;
+    align-items: center;
+}
+.section_update button:hover {
+    color: #1e6f5c;
+}
+
+.section_update button{
+        border-radius: 10px 5px;
+    position: relative;
+    left: 450px;
+    width: 250px;
+    height: 38px;
+    font-size: 25px;
+    font-family: 'Fredoka One', cursive;
+}
+
+
+/*style login*/
+
+.section_login {
+    color: #f1faee;
+    display: inline-block;
+    position: relative;
+    left: 40%;
+    top: 150px;
+    margin-bottom: 300px;
+    align-content: center;
+}
+
+.section_login form {
+    display: inline-block;
+}
+
+.section_login label {
+    padding: 20px;
+    margin: 30px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    display: inline-block;
+    position: relative;
+    bottom: 40px;
+}
+
+.section_login select {
+    margin: 30px;
+    padding-left: 0;
+    position: relative;
+    right: 180px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    height: 38px;
+    width: 641.2px;
+    align-items: center;
+}
+
+.section_login .user {
+    margin: 30px;
+    position: relative;
+    right: 405px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    height: 38px;
+    width: 641.2px;
+    align-items: center;
+    display: inline-block;
+}
+
+.section_login .password {
+    position: relative;
+    top: 50px;
+    right: 1135px;
+    display: inline-block;
+}
+
+.section_login .userName {
+    position: relative;
+    right: 190px;
+    display: inline-block;
+}
+
+.section_login button {
+    border-radius: 10px 5px;
+    position: relative;
+    left: 250px;
+    width: 250px;
+    height: 38px;
+    font-size: 25px;
+    font-family: 'Fredoka One', cursive;
+    display: inline-block;
+}
+
+.section_login input[type="password"] {
+    margin: 30px;
+    position: relative;
+    right: 170px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 25px;
+    height: 38px;
+    width: 641.2px;
+    align-items: center;
+}
+
+.section_login button:hover {
+    color: #1e6f5c;
+}
+
+.section_login input[type="checkbox"] {
+    position: relative;
+    bottom: 37px;
+}
+
+.monitor_ri{
+    position: relative;
+    top: 50px;
+}

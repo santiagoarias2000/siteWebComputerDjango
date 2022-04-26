@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+          integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+
+</head>
+<script>
+    // The function below will start the confirmation dialog
+    function confirmAction() {
+        let confirmAction = confirm("Are you sure to execute this action?");
+        if (confirmAction) {
+            alert("Action successfully executed");
+        } else {
+            alert("Action canceled");
+        }
+    }
+</script>
+<body>
+<nav class="nav">
+
+    <ul class="nav__ul">
+        <div class="nav__ul--margin">
+            {% if perms.products.add_products %}
+                <li class="nav__li right"><i class=""></i><a href="{% url 'views_user' %}">User</a></li>
+            {% endif %}
+            <li class="nav__li right"><i class=""></i><a href="{% url 'index' %}">Index</a></li>
+            <li class="nav__li right"><i class=""></i><a href="{% url 'view_products' %}">Products</a></li>
+            <li class="nav__li right"><i class=""></i><a href="{% url 'view_laptops' %}">Laptops</a></li>
+            <li class="nav__li right"><i class=""></i><a href="{% url 'view_pc' %}">Pc</a></li>
+            <li class="nav__li right"><i class=""></i><a href="{% url 'view_monitors' %}">Monitors</a></li>
+            <li class="nav__li right"><a href="{% url 'view_type-peripheral' %}">Peripheral</a></li>
+            <li class="nav__li left"><a href=""><i class="fas fa-cart-arrow-down"></i></a></li>
+            <li class="nav__li left"><a href="{% url 'filter_product' %}"><i class="fas fa-search"></i></a></li>
+            {% if perms.products.add_products %}
+                <li class="nav__li left"><a href="{% url 'product_create' %}"><i class="fas fa-save"></i></a></li>
+            {% endif %}
+            <li class="nav__li left"><a href="{% url 'user_create' %}"><i class="fas fa-user-plus"></i></a></li>
+            {% if user.is_authenticated %}
+                <li class="nav__li left"><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i></a></li>
+            {% else %}
+                <li class="nav__li left"><a href="{% url 'login' %}"><i class="fas fa-users"></i></a></li>
+            {% endif %}
+        </div>
+    </ul>
+
+    <ul class="nav__responsive-ul">
+        <div class="nav__responsive-button-container">
+            <div class="nav__responsive-button"><i class="fas fa-bars"></i></div>
+        </div>
+        <div class="nav__li-container">
+            {% if perms.products.add_products %}
+                <li class="nav__responsive-li"><i class=""></i><a href="{% url 'views_user' %}">User</a></li>
+            {% endif %}
+            <li class="nav__responsive-li"><i class=""></i><a href="{% url 'index' %}">Index</a></li>
+            <li class="nav__responsive-li"><i class=""></i><a href="{% url 'view_products' %}">Products</a></li>
+            <li class="nav__responsive-li"><i class=""></i><a href="">Laptops</a></li>
+            <li class="nav__responsive-li"><i class=""></i><a href="{% url 'view_pc' %}">Pc</a></li>
+            <li class="nav__responsive-li"><i class=""></i><a href="{% url 'view_monitors' %}">Monitors</a></li>
+            <li class="nav__responsive-li"><a href="{% url 'view_type-peripheral' %}">Peripheral</a></li>
+            <li class="nav__responsive-li"><a href=""><i class="fas fa-cart-arrow-down"></i></a></li>
+            <li class="nav__responsive-li"><a href="{% url 'filter_product' %}"><i class="fas fa-search"></i></a></li>
+            {% if perms.products.add_products %}
+                <li class="nav__li"><a href="{% url 'product_create' %}"><i class="fas fa-save"></i></a></li>
+            {% endif %}
+            <li class="nav__li"><a href="{% url 'user_create' %}"><i class="fas fa-user-plus"></i></a></li>
+            {% if user.is_authenticated %}
+                <li class="nav__li"><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i></a></li>
+
+            {% else %}
+                <li class="nav__li"><a href="{% url 'login' %}"><i class="fas fa-users"></i></a></li>
+            {% endif %}
+        </div>
+    </ul>
+</nav>
+
+<div class="section_table">
+    {% if message %}
+        <ul class="messages_table">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <div class="card_table">
+        <table class="tg">
+            <thead style="color: #f1faee">
+                    <tr>
+            <th colspan="8" class="tg-0lax"><h1>USER</h1></th>
+        </tr>
+            <tr>
+                <th class="tg-0lax"><h1>User name</h1></th>
+                <th class="tg-0lax"><h1>First name</h1></th>
+                <th class="tg-0lax"><h1>Last name</h1></th>
+                <th class="tg-0lax"><h1>Last login</h1></th>
+                <th class="tg-0lax"><h1>Email</h1></th>
+                <th class="tg-0lax"><h1>Is super user</h1></th>
+                <th class="tg-0lax"><h1>Is active</h1></th>
+                <th class="tg-0lax"></th>
+            </tr>
+            </thead>
+            {% for user in list %}
+                <tbody style="color: #f1faee">
+
+                <tr>
+                    <td class="tg-0lax"><h4>{{ user.username }}</h4></td>
+                    <td class="tg-0lax">{{ user.first_name }}</td>
+                    <td class="tg-0lax">{{ user.last_name }}</td>
+                    <td class="tg-0lax">{{ user.last_login }}</td>
+                    <td class="tg-0lax">{{ user.email }}</td>
+                    <td class="tg-0lax">{{ user.is_superuser }}</td>
+                    <td class="tg-0lax">{{ user.is_active }}</td>
+                    <td class="tg-0lax">
+                        {% if perms.products.delete_user %}
+                            <form action="{% url 'delete_user' user.id %}" method="post">
+                                <a><i class="fas fa-user-minus"> <input type="submit" onclick="confirmAction()"
+                                                                        value="Delete"></i></a>
+                            </form>
+
+                        {% endif %}
+                    </td>
+                </tr>
+                </tbody>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+<footer class="footer">
+    <ul class="ul">
+        <li><a href=""><img src="{% static 'image/logo_facebook.png' %}"></a></li>
+        <li><a href=""><img src="{% static 'image/logo_instagram.jpg' %}"></a></li>
+        <li><a href="tel:3333333"><img src="{% static 'image/logo_whatsapp.jpg' %}"></a></li>
+        <li><a href=""><img src="{% static 'image/logo_youtube.jpg' %}"></a></li>
+
+    </ul>
+    <div class="name">
+        <p>Santiago Andres Arias Mancilla</p>
+
+    </div>
+</footer>
+</body>
+</html>

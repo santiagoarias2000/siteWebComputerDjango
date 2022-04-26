@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+          integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<nav class="nav">
+
+    <ul class="nav__ul">
+        <div class="nav__ul--margin">
+            {% if perms.products.add_products %}
+                <li class="nav__li right"><i class=""></i><a href="{% url 'views_user' %}">User</a></li>
+            {% endif %}
+            <li class="nav__li right"><i class=""></i><a href="{% url 'index' %}">Index</a></li>
+            <li class="nav__li right"><i class=""></i><a href="{% url 'view_products' %}">Products</a></li>
+            <li class="nav__li right"><i class=""></i><a href="{% url 'view_laptops' %}">Laptops</a></li>
+            <li class="nav__li right"><i class=""></i><a href="{% url 'view_pc' %}">Pc</a></li>
+            <li class="nav__li right"><i class=""></i><a href="{% url 'view_monitors' %}">Monitors</a></li>
+            <li class="nav__li right"><a href="{% url 'view_type-peripheral' %}">Peripheral</a></li>
+            <li class="nav__li left"><a href="{% url 'view_car' %}"><i class="fas fa-cart-arrow-down"></i></a></li>
+            <li class="nav__li left"><a href="{% url 'filter_product' %}"><i class="fas fa-search"></i></a></li>
+            <li class="nav__li left"><a href="{% url 'user_create' %}"><i class="fas fa-user-plus"></i></a></li>
+            {% if user.is_authenticated %}
+                <li class="nav__li left"><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i></a></li>
+            {% else %}
+                <li class="nav__li left"><a href="{% url 'login' %}"><i class="fas fa-users"></i></a></li>
+            {% endif %}
+
+
+        </div>
+    </ul>
+
+    <ul class="nav__responsive-ul">
+        <div class="nav__responsive-button-container">
+            <div class="nav__responsive-button"><i class="fas fa-bars"></i></div>
+        </div>
+        <div class="nav__li-container">
+            {% if perms.products.add_products %}
+                <li class="nav__responsive-li"><i class=""></i><a href="{% url 'views_user' %}">User</a></li>
+            {% endif %}
+            <li class="nav__responsive-li"><i class=""></i><a href="{% url 'index' %}">Index</a></li>
+            <li class="nav__responsive-li"><i class=""></i><a href="{% url 'view_products' %}">Products</a></li>
+            <li class="nav__responsive-li"><i class=""></i><a href="">Laptops</a></li>
+            <li class="nav__responsive-li"><i class=""></i><a href="{% url 'view_pc' %}">Pc</a></li>
+            <li class="nav__responsive-li"><i class=""></i><a href="{% url 'view_monitors' %}">Monitors</a></li>
+            <li class="nav__responsive-li"><a href="{% url 'view_type-peripheral' %}">Peripheral</a></li>
+            <li class="nav__responsive-li"><a href="{% url 'view_car' %}"><i class="fas fa-cart-arrow-down"></i></a></li>
+            <li class="nav__responsive-li"><a href=""><i class="fas fa-search"></i></a></li>
+            <li class="nav__responsive-li"><a href="{% url 'user_create' %}"><i class="fas fa-user-plus"></i></a></li>
+            {% if user.is_authenticated %}
+                <li class="nav__responsive-li"><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i></a></li>
+            {% else %}
+                <li class="nav__responsive-li"><a href="{% url 'login' %}"><i class="fas fa-users"></i></a></li>
+            {% endif %}
+        </div>
+    </ul>
+</nav>
+
+<div class="section_filter">
+
+    <div class="filter">
+        <div class="search-form">
+            <form action="{% url 'filter_product' %}" method="post" class="form_search">
+                <input type="text" name="name_product" id="text_filter">
+                <input type="submit" value="Search" id="button_filter">
+            </form>
+        </div>
+        {% for one_product in filter_product %}
+            {% if one_product %}
+            <div class="card_filter">
+                <img src="{{ one_product.image.url }}" width="200" height="200">
+                <h2>Name<br>{{ one_product.name }}</h2>
+                <h3>Description<br>{{ one_product.description_general }}</h3>
+                <h4>Price<br>{{ one_product.price }}</h4>
+            </div>
+            {% else %}
+                <p style="color: #f1faee">dddd</p>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+
+<footer class="footer">
+    <ul class="ul">
+        <li><a href=""><img src="{% static 'image/logo_facebook.png' %}"></a></li>
+        <li><a href=""><img src="{% static 'image/logo_instagram.jpg' %}"></a></li>
+        <li><a href="tel:3333333"><img src="{% static 'image/logo_whatsapp.jpg' %}"></a></li>
+        <li><a href=""><img src="{% static 'image/logo_youtube.jpg' %}"></a></li>
+
+    </ul>
+    <div class="name">
+        <p>Santiago Andres Arias Mancilla</p>
+
+    </div>
+</footer>
+</body>
+</html>

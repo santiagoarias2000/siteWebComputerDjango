@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+          integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+<nav class="nav">
+
+    <ul class="nav__ul">
+        <div class="nav__ul--margin">
+            <li class="nav__li"><i class=""></i><a href="{% url 'view_products' %}">Products</a></li>
+            <li class="nav__li"><i class=""></i><a href="">Laptops</a></li>
+            <li class="nav__li"><i class=""></i><a href="">Pc</a></li>
+            <li class="nav__li"><i class=""></i><a href="">Monitors</a></li>
+            <li class="nav__li"><a href="">Peripheral</a></li>
+            <li class="nav__li"><a href=""><i class="fas fa-cart-arrow-down"></i></a></li>
+            <li class="nav__li"><a href=""><i class="fas fa-search"></i></a></li>
+        </div>
+    </ul>
+
+    <ul class="nav__responsive-ul">
+        <div class="nav__responsive-button-container">
+            <div class="nav__responsive-button"><i class="fas fa-bars"></i></div>
+        </div>
+        <div class="nav__li-container">
+            <li class="nav__responsive-li"><i class=""></i><a href="{% url 'view_products' %}">Products</a></li>
+            <li class="nav__responsive-li"><i class=""></i><a href="">Laptops</a></li>
+            <li class="nav__responsive-li"><i class=""></i><a href="">Pc</a></li>
+            <li class="nav__responsive-li"><i class=""></i><a href="">Monitors</a></li>
+            <li class="nav__responsive-li"><a href="">Peripheral</a></li>
+            <li class="nav__responsive-li"><a href=""><i class="fas fa-cart-arrow-down"></i></a></li>
+            <li class="nav__responsive-li"><a href=""><i class="fas fa-search"></i></a></li>
+        </div>
+    </ul>
+</nav>
+
+<div class="section">
+    <div class="card">
+
+    </div>
+</div>
+
+<footer class="footer">
+    <ul class="ul">
+        <li><a href=""><img src="{% static 'image/logo_facebook.png' %}"></a></li>
+        <li><a href=""><img src="{% static 'image/logo_instagram.jpg' %}"></a></li>
+        <li><a href="tel:3333333"><img src="{% static 'image/logo_whatsapp.jpg' %}"></a></li>
+        <li><a href=""><img src="{% static 'image/logo_youtube.jpg' %}"></a></li>
+
+    </ul>
+    <div class="name">
+        <p>Santiago Andres Arias Mancilla</p>
+
+    </div>
+</footer>
+</body>
+</html>
